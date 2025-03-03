@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart ATS Resume Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bullseye"></i> Smart ATS Resume Analyzer</h1>
+            <p class="tagline">Get your resume AI-analyzed for job applications</p>
+        </header>
+
+        <div class="info-box">
+            <h4><i class="fas fa-thumbtack"></i> How to use:</h4>
+            <ol>
+                <li>Upload your resume in PDF format</li>
+                <li>Paste the job application link</li>
+                <li>Click submit and get instant AI-powered feedback!</li>
+            </ol>
+        </div>
+
+        <div class="form-container">
+            <div class="input-group">
+                <div class="upload-section">
+                    <h3><i class="fas fa-file-pdf"></i> Upload Resume</h3>
+                    <label for="resume-upload" class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose PDF
+                        <input type="file" id="resume-upload" accept=".pdf" hidden>
+                    </label>
+                    <div id="file-name" class="file-name">No file chosen</div>
+                </div>
+
+                <div class="job-link-section">
+                    <h3><i class="fas fa-link"></i> Job Details</h3>
+                    <textarea id="job-link" placeholder="Paste the job application link here..."></textarea>
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <button id="analyze-btn" class="analyze-btn">
+                    <i class="fas fa-rocket"></i> Analyze Resume
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading-container hidden">
+            <div class="loader">
+                <div class="spinner"></div>
+            </div>
+            <p>Analyzing your resume... Please wait</p>
+        </div>
+
+        <div id="results" class="results-container hidden">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="analysis">Analysis Results</button>
+                <button class="tab-btn" data-tab="email">Application Email</button>
+            </div>
+
+            <div id="analysis" class="tab-content active">
+                <!-- Analysis results will be displayed here -->
+                <div id="analysis-content"></div>
+            </div>
+
+            <div id="email" class="tab-content">
+                <div class="email-container">
+                    <h2><i class="fas fa-envelope"></i> Generated Job Application Email</h2>
+                    <div class="email-actions">
+                        <button id="copy-email" class="action-btn">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button id="download-email" class="action-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div id="email-content" class="email-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Smart ATS Resume Analyzer | Powered by AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
