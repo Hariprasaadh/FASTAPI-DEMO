@@ -7,3 +7,5 @@ python-dotenv
 langchain-groq
 langchain-core
 langchain-community
+beautifulsoup4
+requests

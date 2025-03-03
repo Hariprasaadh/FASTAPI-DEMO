@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // API endpoint (change this to your actual API URL)
-    const API_URL = 'http://localhost:8000';
+    const API_URL = 'https://ats-demo-0khx.onrender.com';
 
     // DOM elements
     const resumeUpload = document.getElementById('resume-upload');
